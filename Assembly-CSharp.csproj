@@ -63,6 +63,8 @@
     <Compile Include="Assets\branch.cs" />
     <Compile Include="Assets\BuildMap.cs" />
     <Compile Include="Assets\cameraController.cs" />
+    <Compile Include="Assets\grabFromServer.cs" />
+    <Compile Include="Assets\serverInfo.cs" />
     <Compile Include="Assets\SproutChildren.cs" />
     <Compile Include="Assets\upperBranch.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
