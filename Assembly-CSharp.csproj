@@ -60,13 +60,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\branch.cs" />
     <Compile Include="Assets\BuildMap.cs" />
     <Compile Include="Assets\cameraController.cs" />
+    <Compile Include="Assets\getSwole.cs" />
     <Compile Include="Assets\grabFromServer.cs" />
     <Compile Include="Assets\serverInfo.cs" />
     <Compile Include="Assets\SproutChildren.cs" />
-    <Compile Include="Assets\upperBranch.cs" />
+    <Compile Include="Assets\switchRepo.cs" />
+    <Compile Include="Assets\TokenClassName.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/frackfrick/Folder Explorer/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
