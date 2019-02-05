@@ -10,6 +10,10 @@ public class SproutChildren : MonoBehaviour
     public void Sprout(string[] files, string parentGitLocation, string ogLocation)
     {
         childrenCount = files.Length;
+        if(childrenCount == 0)
+        {
+            GameObject.Destroy(gameObject);
+        }
         for (int i = 0; i < childrenCount; i++)
         {
             GameObject newBranch = Instantiate(branchObject, transform);

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 159507892532452884}
   m_Layer: 0
   m_Name: Contents
-  m_TagString: Untagged
+  m_TagString: root
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,4 +139,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRoot: 1
-  resizeSpeed: 1
+  resizeSpeed: 0.1

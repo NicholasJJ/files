@@ -16,14 +16,19 @@ public class switchRepo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            redo();
+        }
     }
     public void redo()
     {
         Debug.Log("button pressed");
-        GameObject.Destroy(GameObject.Find("Contents"));
+        transform.SetParent(null);
+        GameObject.Destroy(GameObject.FindWithTag("root"));
         GameObject newContents = Instantiate(contents);
-        newContents.transform.position = transform.position + Vector3.down;
+        newContents.transform.position = transform.position + 2*Vector3.down;
         newContents.GetComponent<grabFromServer>().ogGitLocation = repoText.text;
+        transform.SetParent(newContents.transform);
     }
 }

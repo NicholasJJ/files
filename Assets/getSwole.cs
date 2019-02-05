@@ -17,13 +17,14 @@ public class getSwole : MonoBehaviour
     {
         if (isRoot)
         {
+            float size = transform.localScale.x;
             if (Input.GetKey(KeyCode.Q))
             {
-                transform.localScale = transform.localScale + new Vector3(resizeSpeed,0,resizeSpeed);
+                transform.localScale = transform.localScale + new Vector3(resizeSpeed * size,0,resizeSpeed * size);
             }
-            else if (Input.GetKey(KeyCode.E))
+            else if (Input.GetKey(KeyCode.E) && transform.localScale.x > 1)
             {
-                transform.localScale = transform.localScale - new Vector3(resizeSpeed, 0, resizeSpeed);
+                transform.localScale = transform.localScale - new Vector3(resizeSpeed * size, 0, resizeSpeed * size);
             }
         }
     }
