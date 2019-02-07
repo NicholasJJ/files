@@ -61,10 +61,12 @@ public class cameraController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
         else if (Input.GetMouseButtonDown(0) && GameObject.Find("writeText").GetComponent<InputField>().isFocused == false)
         {
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 }

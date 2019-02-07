@@ -112,12 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &367575795 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3631857858324802575, guid: 6d06ef87d47a24b378bbb178a020db68,
-    type: 3}
-  m_PrefabInstance: {fileID: 3631857858522961229}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &564715168
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,10 +461,10 @@ RectTransform:
   m_Father: {fileID: 1188756071}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -437.1, y: 184.5}
-  m_SizeDelta: {x: 392.9, y: 479.1}
+  m_AnchorMin: {x: 0.033, y: 0.44348535}
+  m_AnchorMax: {x: 0.32000002, y: 0.97851473}
+  m_AnchoredPosition: {x: -6.100006, y: -2.5}
+  m_SizeDelta: {x: 10.899994, y: 5.100006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1328796572
 MonoBehaviour:
@@ -513,7 +507,14 @@ MonoBehaviour:
 
     2. Press Tab to show the repository you listed
 
-    3. clicking on any of the objects will take you to it''s page on github'
+    3. Mouse and WASD to move the camera, Q / E to zoom in/out
+
+    4. clicking on any of the objects will take you to it''s page on github
+
+
+    Note: The github api has a saftey protocal that limits you to 5000 requests per
+    hour, if the repo tree isn''t fully grown (or doesn''t start at all), wait for
+    the rate limit to reset.'
 --- !u!222 &1328796573
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -745,11 +746,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390602771}
   m_LocalRotation: {x: 0.00043630067, y: -0, z: -0, w: 0.99999994}
-  m_LocalPosition: {x: 0, y: 11.2, z: -0.592}
-  m_LocalScale: {x: 0.01, y: 6.2235193, z: 0.062239926}
+  m_LocalPosition: {x: 0, y: 11.2, z: -59.2}
+  m_LocalScale: {x: 1, y: 6.2239885, z: 6.223988}
   m_Children: []
-  m_Father: {fileID: 367575795}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0.05, y: 0, z: 0}
 --- !u!114 &1390602775
 MonoBehaviour:
@@ -1096,6 +1097,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: root
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631857858324802672, guid: 6d06ef87d47a24b378bbb178a020db68,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3631857858324802575, guid: 6d06ef87d47a24b378bbb178a020db68,
         type: 3}

@@ -12,6 +12,10 @@ public class SproutChildren : MonoBehaviour
         childrenCount = files.Length;
         if(childrenCount == 0)
         {
+            if (gameObject.tag == "root")
+            {
+                GameObject.Find("Main Camera").transform.SetParent(null);
+            }
             GameObject.Destroy(gameObject);
         }
         for (int i = 0; i < childrenCount; i++)

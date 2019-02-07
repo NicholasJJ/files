@@ -15,7 +15,7 @@ public class getSwole : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isRoot)
+        if (isRoot && Cursor.lockState == CursorLockMode.Locked)
         {
             float size = transform.localScale.x;
             if (Input.GetKey(KeyCode.Q))
