@@ -55,6 +55,13 @@ public class cameraController : MonoBehaviour
                     Application.OpenURL("https://github.com/" + ogGitlocation + "/blob/master" + gitlocation);
                 }
             }
+            else if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Debug.Log("space clicked!");
+                string ogGitlocation = hrit.transform.gameObject.GetComponent<grabFromServer>().ogGitLocation;
+                string hash = hrit.transform.gameObject.GetComponent<grabFromServer>().myHash;
+                gameObject.GetComponent<GrabCommitFromServer>().getCommit(hash, ogGitlocation);
+            }
         }
 
         //change cursor state

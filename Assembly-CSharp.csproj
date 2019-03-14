@@ -63,6 +63,7 @@
     <Compile Include="Assets\BuildMap.cs" />
     <Compile Include="Assets\cameraController.cs" />
     <Compile Include="Assets\getSwole.cs" />
+    <Compile Include="Assets\GrabCommitFromServer.cs" />
     <Compile Include="Assets\grabFromServer.cs" />
     <Compile Include="Assets\openURL.cs" />
     <Compile Include="Assets\serverInfo.cs" />

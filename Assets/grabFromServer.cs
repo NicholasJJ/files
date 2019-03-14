@@ -9,6 +9,9 @@ public class grabFromServer : MonoBehaviour
     public string gitLocation;
     public string ogGitLocation;
     public List<string> children;
+    public List<float> childrenSizes;
+    public List<string> childrenHashes;
+    public string myHash;
     public string[] bits;
     private void Start()
     {
@@ -30,9 +33,17 @@ public class grabFromServer : MonoBehaviour
                     kidName = kidName + bits[i + n] + " ";
                 }
                 children.Add(kidName.Remove(kidName.Length - 4).Substring(1));
+            } else if (bits[i] == "\"size\":")
+            {
+                float kidSize = float.Parse(bits[i + 1].Remove(bits[i+1].Length-1));
+                childrenSizes.Add(kidSize);
+            }
+            else if (bits[i] == "\"sha\":")
+            {
+                childrenHashes.Add(bits[i + 1].Substring(1,bits[i+1].Length - 4));
             }
         }
-        gameObject.GetComponent<SproutChildren>().Sprout(children.ToArray(), gitLocation, ogGitLocation);
+        gameObject.GetComponent<SproutChildren>().Sprout(children.ToArray(), gitLocation, ogGitLocation,childrenSizes.ToArray(),childrenHashes.ToArray());
     }
 
 

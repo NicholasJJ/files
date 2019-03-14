@@ -7,6 +7,7 @@ public class switchRepo : MonoBehaviour
 {
     public Text repoText;
     public GameObject contents;
+    public GameObject treeStem;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,20 @@ public class switchRepo : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             redo();
+        } else if (Input.GetKeyDown(KeyCode.Semicolon))
+        {
+            treedo();
         }
+    }
+    public void treedo()
+    {
+        Debug.Log("tree button pressed");
+        transform.SetParent(null);
+        GameObject.Destroy(GameObject.FindWithTag("root"));
+        GameObject newContents = Instantiate(treeStem);
+        newContents.transform.position = transform.position + 2 * Vector3.forward;
+        newContents.GetComponent<grabFromServer>().ogGitLocation = repoText.text;
+        transform.SetParent(newContents.transform);
     }
     public void redo()
     {
